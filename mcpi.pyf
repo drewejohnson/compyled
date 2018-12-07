@@ -1,0 +1,26 @@
+!    -*- f90 -*-
+! Note: the context of this file is case sensitive.
+
+python module mcpi ! in 
+    interface  ! in :mcpi
+        subroutine pi_with_coords(n,x,y,pos,cpi) ! in :mcpi:mcpi.f90
+            integer intent(in) :: n
+            double precision dimension(n),intent(out),depend(n) :: x
+            double precision dimension(n),intent(out),depend(n) :: y
+            integer dimension(n),intent(out),depend(n) :: pos
+            double precision intent(out) :: cpi
+        end subroutine pi_with_coords
+        function calc_pi(n) ! in :mcpi:mcpi.f90
+            integer intent(in) :: n
+            double precision :: calc_pi
+        end function calc_pi
+        subroutine sample_pi(ns,samples,bins) ! in :mcpi:mcpi.f90
+            integer, optional,intent(in),check(len(samples)>=ns),depend(samples) :: ns=len(samples)
+            integer dimension(ns),intent(in) :: samples
+            double precision dimension(ns),intent(out),depend(ns) :: bins
+        end subroutine sample_pi
+    end interface 
+end python module mcpi
+
+! This file was auto-generated with f2py (version:2).
+! See http://cens.ioc.ee/projects/f2py2e/
