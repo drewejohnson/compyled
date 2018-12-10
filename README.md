@@ -1,5 +1,5 @@
-# f2py-exercises
-Play around with `f2py`
+# compyled
+Play around with `f2py` and other ways to use compiled code (fortran, c) with python
 
 ## Content
 
