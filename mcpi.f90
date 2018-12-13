@@ -40,7 +40,7 @@ Cf2py intent(in) n
       do i=1,n
       call random_number(x)
       call random_number(y)
-      if (sqrt(x ** 2 + y ** 2).le.1) then
+      if (sqrt(x * x + y * y).le.1) then
           s = s + 1
       endif
       enddo
