@@ -6,6 +6,7 @@ Check out [the wiki](https://github.com/drewejohnson/compyled/wiki) for more inf
 ## Content
 
 1. `mcpi.f90` - routines for estimating the value of pi using the Monte Carlo method
+2. `purecython.pyx` - pure cython implementation with a corresponding setup file
 
 ## TODO
 
