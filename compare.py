@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 """
 Script that uses the fortran routine for computing pi
 and compares run times against a numpy version
